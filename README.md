@@ -137,6 +137,34 @@ For security vulnerabilities, copyright questions, or other project-security con
 
 For a security report, include the Nyxoryth version, Windows version, reproduction steps, and the impact you observed. Avoid posting sensitive vulnerability details publicly before they can be reviewed.
 
+
+## Development Transparency
+
+Nyxoryth was developed with assistance from AI tools during the programming process.
+
+AI assistance was used as a development aid for tasks such as brainstorming, debugging assistance, code review, and implementation support. The project owner directed the design, feature decisions, testing, integration, source organization, and final project decisions.
+
+The Nyxoryth source code was reviewed for potential third-party code inclusion, copied source material, external licensing requirements, and attribution requirements. No third-party application source code was identified in the project source during this review.
+
+Nyxoryth uses standard platform APIs and development tools, including Windows APIs and compiler/build tooling. These dependencies are documented separately in `THIRD_PARTY_NOTICES.md`.
+
+## Copyright and Source Concerns
+
+If you believe Nyxoryth contains code, assets, or other material that infringes your rights, please contact the project owner so the concern can be reviewed:
+
+**Queen3K@proton.me**
+
+Please include:
+
+- the specific file or material involved
+- a description of the concern
+- relevant ownership or licensing information
+- contact information for follow-up
+
+Good-faith reports will be reviewed and addressed appropriately.
+
+For security vulnerabilities, please see `SECURITY.md`.
+
 ## License
 
 Nyxoryth Calculator is released under the **MIT License**. See [`LICENSE`](LICENSE).

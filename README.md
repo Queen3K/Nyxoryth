@@ -139,7 +139,7 @@ For a security report, include the Nyxoryth version, Windows version, reproducti
 
 ## License
 
-Nyxoryth Calculator is released under the **MIT License**. See [`LICENSE.txt`](LICENSE.txt).
+Nyxoryth Calculator is released under the **MIT License**. See [`LICENSE`](LICENSE).
 
 ## Third-party software
 

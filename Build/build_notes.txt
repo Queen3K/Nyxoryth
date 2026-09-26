@@ -1,0 +1,8 @@
+Build target:
+
+Nyxoryth.exe
+
+Recommended:
+Visual Studio Community
+Windows SDK
+C++ Desktop Development workload

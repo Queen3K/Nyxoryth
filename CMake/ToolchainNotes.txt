@@ -1,0 +1,8 @@
+Nyxoryth build preference:
+
+1. Latest installed Visual Studio generator
+2. x64 architecture
+3. Modern Windows SDK
+4. C++17 standard
+
+The script uses CMake discovery rather than locking the project to VS2019.

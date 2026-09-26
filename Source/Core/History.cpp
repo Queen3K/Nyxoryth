@@ -1,0 +1,1 @@
+// Local history manager foundation.

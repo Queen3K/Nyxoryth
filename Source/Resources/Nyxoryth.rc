@@ -1,0 +1,39 @@
+#include <windows.h>
+#include "Resource.h"
+
+IDI_NYXORYTH ICON "Nyxoryth.ico"
+
+VS_VERSION_INFO VERSIONINFO
+ FILEVERSION 1,0,0,0
+ PRODUCTVERSION 1,0,0,0
+ FILEFLAGSMASK VS_FFI_FILEFLAGSMASK
+#ifdef _DEBUG
+ FILEFLAGS VS_FF_DEBUG
+#else
+ FILEFLAGS 0x0L
+#endif
+ FILEOS VOS__WINDOWS32
+ FILETYPE VFT_APP
+ FILESUBTYPE 0x0L
+BEGIN
+    BLOCK "StringFileInfo"
+    BEGIN
+        BLOCK "040904B0"
+        BEGIN
+            VALUE "CompanyName", "Nyxoryth Calculator\0"
+            VALUE "FileDescription", "Nyxoryth Calculator\0"
+            VALUE "FileVersion", "1.0.0.0\0"
+            VALUE "InternalName", "Nyxoryth\0"
+            VALUE "LegalCopyright", "Copyright (c) 2026 Nyxoryth Calculator Authors\0"
+            VALUE "Comments", "Copyright/security contact: Queen3K@proton.me\0"
+            VALUE "OriginalFilename", "Nyxoryth.exe\0"
+            VALUE "ProductName", "Nyxoryth Calculator\0"
+            VALUE "ProductVersion", "1.0.0 RC1\0"
+        END
+    END
+
+    BLOCK "VarFileInfo"
+    BEGIN
+        VALUE "Translation", 0x0409, 1200
+    END
+END

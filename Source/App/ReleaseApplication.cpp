@@ -1,1 +1,0 @@
-// Release application coordinator.

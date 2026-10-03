@@ -12,6 +12,7 @@ $required = @(
     "THIRD_PARTY_NOTICES.md",
     "SECURITY.md",
     "VERSION.txt",
+    "RELEASE_NOTES_1.1.0.md",
     "SHA256SUMS.txt"
 )
 

@@ -1,1 +1,0 @@
-// Release module registry.

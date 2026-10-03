@@ -1,6 +1,6 @@
 # Nyxoryth Calculator
 
-**Current release:** 1.0.0 RC1
+**Current release:** 1.1.0
 
 Nyxoryth Calculator is a native Windows calculator designed for local/offline use. It combines a standard calculator with scientific, tip/bill-split, programmer, and computer-utility tools in one application.
 
@@ -26,12 +26,62 @@ Nyxoryth Calculator is a native Windows calculator designed for local/offline us
 - x^y, 10^x, and e^x
 - absolute value
 
+### Scientific+
+- sinh, cosh, tanh
+- asinh, acosh, atanh
+- cube root and nth root
+- 2^x and log2
+- combinations (nCr) and permutations (nPr)
+- modulo
+- floor, ceil, and round
+- local random-number generation using the C++ standard library
+
+### Statistics
+- count, sum, mean, median, and mode
+- minimum, maximum, and range
+- population variance and standard deviation
+- sample variance and standard deviation
+
+### Fractions / GCD / LCM
+- fraction addition, subtraction, multiplication, and division
+- simplify fractions
+- fraction-to-decimal conversion
+- improper-to-mixed and mixed-to-improper conversion
+- greatest common divisor and least common multiple
+
+### Equation Solver
+- linear equations in the form `a*x + b = c`
+- quadratic equations in the form `a*x^2 + b*x + c = 0`
+- discriminant reporting
+- real and complex quadratic roots
+
+### Complex Numbers
+- addition, subtraction, multiplication, and division
+- magnitude
+- conjugate
+- argument in radians and degrees
+
 ### Tip / Bill Split
 - Bill amount
 - Custom tip percentage
 - 15%, 18%, 20%, and 25% quick presets
 - Split by number of people
 - Tip amount, total, and per-person result
+
+### Unit Converter
+- length, mass, temperature, area, and volume
+- speed, pressure, energy, and power
+- angle conversion
+- decimal and binary data-size conversion (KB/MB/GB/TB and KiB/MiB/GiB/TiB)
+- manual-rate conversion for user-supplied exchange/conversion rates without an online API
+
+### Date / Time Tools
+- days between two dates
+- add or subtract days
+- leap-year and day-of-week inspection
+- date/time to Unix timestamp (UTC)
+- Unix timestamp to UTC date/time
+- seconds to hours/minutes/seconds
 
 ### Programmer / Computer Tools
 - Decimal, hexadecimal, octal, and binary conversion
@@ -40,6 +90,30 @@ Nyxoryth Calculator is a native Windows calculator designed for local/offline us
 - Byte conversion to KiB, MiB, GiB, and TiB
 - IPv4/CIDR network, mask, broadcast, and address count
 - Character to Unicode/code-point conversion
+
+### Advanced Bit Tools
+- selectable 8/16/32/64-bit word sizes
+- signed and unsigned interpretation
+- two's-complement bit display
+- grouped binary and popcount
+- set, clear, and toggle individual bits
+- rotate left/right
+- endian reversal
+- ASCII 0-127 browser
+- Unicode scalar-value lookup
+
+### Computer / Storage Math
+- transfer-time estimates
+- bitrate-to-file-size calculations
+- resolution, pixel count, megapixels, aspect ratio, and PPI
+- RAID 0/1/5/6/10 usable-capacity estimates and basic fault-tolerance notes
+
+### Navigation and screen layout
+- Three-bar menu in the upper-left corner for Standard, Scientific, Scientific+, Statistics, Fractions, Equations, Complex Numbers, Tip, Units, Date/Time, Programmer, Bit Tools, Computer Math, History, and Settings
+- Modes open as full calculator screens instead of side-by-side panels
+- Scientific mode uses an integrated 5-column keypad containing both scientific and standard calculator keys
+- Switching modes no longer automatically widens the window
+- Existing normal resize, maximize, restore, and saved window-size support remains available
 
 ### Appearance and usability
 - Embedded Nyxoryth Windows application icon
@@ -52,11 +126,32 @@ Nyxoryth Calculator is a native Windows calculator designed for local/offline us
 - Cover and Fit background scaling
 - Adjustable readability overlay
 - Remembers theme, background, overlay, scale mode, last calculator mode, window position, and Always-on-Top
+- Resizable/maximizable window with saved window size
+- Optimized animated GIF background rendering and smooth move/resize behavior
 - Copy selected history entry
 - About screen
 - Reset Settings control with confirmation
 - `F1` opens About
 - `Ctrl+C` copies the current calculator result
+
+
+## Keyboard shortcuts
+
+Nyxoryth keeps normal text editing behavior inside input boxes while adding screen-level shortcuts:
+
+- `Alt+M` — open the three-bar screen menu
+- `F6` — focus/select the primary input for the active tool screen
+- `F5` — run the active screen's primary calculation where the screen has a clear primary action
+- `Enter` — run the context-appropriate action from single-line tool inputs
+- `Ctrl+Enter` — calculate Statistics while preserving ordinary Enter/new-line behavior in the multiline Statistics input
+- `F1` — About Nyxoryth
+- `Ctrl+C` — copy the calculator result when focus is on the calculator rather than a text-selection field
+
+Examples:
+- Equation Solver: Enter in a linear coefficient solves the linear equation; Enter in a quadratic coefficient solves the quadratic equation.
+- Date / Time: Enter chooses the action that matches the focused date/time field.
+- Computer / Storage Math: Enter runs Transfer, Bitrate, Resolution/PPI, or RAID based on the focused input group.
+- Advanced Bit Tools: Enter converts the bit value; Enter in the Unicode field performs the Unicode lookup.
 
 ## Custom backgrounds
 
@@ -107,9 +202,9 @@ After a successful build, run:
 This creates:
 
 ```text
-Release/Nyxoryth_Portable/
-Release/Nyxoryth_Portable.zip
-Release/Nyxoryth_Portable.zip.sha256
+Release/Nyxoryth_1.1.0_Portable/
+Release/Nyxoryth_1.1.0_Portable.zip
+Release/Nyxoryth_1.1.0_Portable.zip.sha256
 ```
 
 The release script verifies required files, generates SHA-256 checksums, and rejects PNG/JPG/JPEG/GIF/BMP user-media files from the portable package.
@@ -122,6 +217,10 @@ The active build is intentionally small:
 Source/
 ├── App/
 │   └── Main.cpp
+├── Resources/
+│   ├── Nyxoryth.ico
+│   ├── Nyxoryth.rc
+│   └── Resource.h
 └── UI/
     ├── MainWindow.cpp
     └── MainWindow.h
@@ -144,7 +243,7 @@ Nyxoryth was developed with assistance from AI tools during the programming proc
 
 AI assistance was used as a development aid for tasks such as brainstorming, debugging assistance, code review, and implementation support. The project owner directed the design, feature decisions, testing, integration, source organization, and final project decisions.
 
-The Nyxoryth source code was reviewed for potential third-party code inclusion, copied source material, external licensing requirements, and attribution requirements. No third-party application source code was identified in the project source during this review.
+Nyxoryth's active 1.1.0 application source was reviewed for potential third-party code inclusion, copied or paraphrased source material, external licensing requirements, and attribution requirements. No third-party application source code requiring an additional source-code attribution was identified during this review. See `Docs/SOURCE_ATTRIBUTION_AUDIT.md` for the audit scope and limitations.
 
 Nyxoryth uses standard platform APIs and development tools, including Windows APIs and compiler/build tooling. These dependencies are documented separately in `THIRD_PARTY_NOTICES.md`.
 

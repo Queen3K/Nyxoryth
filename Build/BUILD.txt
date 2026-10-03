@@ -1,4 +1,0 @@
-Compile source files using Visual Studio C++.
-
-Output:
-NyxorythCalculator.exe

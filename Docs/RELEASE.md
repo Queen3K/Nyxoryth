@@ -8,7 +8,7 @@
 
 ## Verify
 
-Use `TESTS/V1_RC1_Checklist.md`.
+Use `TESTS/1.1.0_Release_Checklist.md` for release verification and `TESTS/Extended_Calculation_Checklist.md` for detailed calculator-function checks.
 
 ## Create portable release
 

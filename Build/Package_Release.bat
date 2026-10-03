@@ -5,7 +5,7 @@ for %%I in ("%~dp0..") do set "ROOT=%%~fI"
 cd /d "%ROOT%"
 
 echo =====================================
-echo Nyxoryth v1.0 RC1 Portable Release
+echo Nyxoryth v1.1.0 Portable Release
 echo =====================================
 echo.
 
@@ -18,9 +18,9 @@ if errorlevel 1 (
 )
 
 set "RELEASE_ROOT=%ROOT%\Release"
-set "PORTABLE=%RELEASE_ROOT%\Nyxoryth_Portable"
-set "ZIP=%RELEASE_ROOT%\Nyxoryth_Portable.zip"
-set "ZIP_HASH=%RELEASE_ROOT%\Nyxoryth_Portable.zip.sha256"
+set "PORTABLE=%RELEASE_ROOT%\Nyxoryth_1.1.0_Portable"
+set "ZIP=%RELEASE_ROOT%\Nyxoryth_1.1.0_Portable.zip"
+set "ZIP_HASH=%RELEASE_ROOT%\Nyxoryth_1.1.0_Portable.zip.sha256"
 
 if exist "%PORTABLE%" rmdir /s /q "%PORTABLE%"
 if exist "%ZIP%" del /q "%ZIP%"
@@ -34,6 +34,7 @@ copy /y "%ROOT%\LICENSE" "%PORTABLE%\LICENSE" >nul
 copy /y "%ROOT%\THIRD_PARTY_NOTICES.md" "%PORTABLE%\THIRD_PARTY_NOTICES.md" >nul
 copy /y "%ROOT%\SECURITY.md" "%PORTABLE%\SECURITY.md" >nul
 copy /y "%ROOT%\VERSION.txt" "%PORTABLE%\VERSION.txt" >nul
+copy /y "%ROOT%\RELEASE_NOTES_1.1.0.md" "%PORTABLE%\RELEASE_NOTES_1.1.0.md" >nul
 
 powershell -NoProfile -ExecutionPolicy Bypass -Command ^
   "$h=(Get-FileHash '%PORTABLE%\Nyxoryth.exe' -Algorithm SHA256).Hash; Set-Content -Path '%PORTABLE%\SHA256SUMS.txt' -Value ($h + '  Nyxoryth.exe') -Encoding ASCII"
@@ -62,7 +63,7 @@ if errorlevel 1 (
 )
 
 powershell -NoProfile -ExecutionPolicy Bypass -Command ^
-  "$h=(Get-FileHash '%ZIP%' -Algorithm SHA256).Hash; Set-Content -Path '%ZIP_HASH%' -Value ($h + '  Nyxoryth_Portable.zip') -Encoding ASCII"
+  "$h=(Get-FileHash '%ZIP%' -Algorithm SHA256).Hash; Set-Content -Path '%ZIP_HASH%' -Value ($h + '  Nyxoryth_1.1.0_Portable.zip') -Encoding ASCII"
 if errorlevel 1 (
     echo.
     echo ZIP checksum creation failed.

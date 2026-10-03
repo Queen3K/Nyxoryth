@@ -10,8 +10,9 @@ Nyxoryth uses APIs supplied by Microsoft Windows, including:
 - GDI+
 - Windows common file dialog
 - Windows common controls
+- Windows-provided Bahnschrift/Bahnschrift SemiBold fonts requested at runtime
 
-Windows is not distributed with this repository. Microsoft is not claimed as an author of Nyxoryth.
+Windows is not distributed with this repository. Nyxoryth does not bundle the Bahnschrift font files; it only requests the Windows-installed font at runtime. Microsoft is not claimed as an author of Nyxoryth.
 
 ## GCC / libstdc++ runtime components
 
